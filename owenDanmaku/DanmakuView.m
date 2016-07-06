@@ -46,7 +46,7 @@
             [self addSubview:newBullet];
             [_channelArray setObject:newBullet atIndexedSubscript:i];
             newBullet.frame = CGRectMake(SCREEN_WIDTH,  i * 40, width, 40);
-            //UIViewAnimationOptionCurveLinear使整个动画过程匀速
+            //UIViewAnimationOptionCurveLinear使整个动画过程匀速进行
             [UIView animateWithDuration:DanmakuTime delay:0 options:(UIViewAnimationOptionCurveLinear) animations:^{
                 newBullet.frame = CGRectMake(0 - width,  i * 40,width, 40);
             } completion:^(BOOL finished) {
