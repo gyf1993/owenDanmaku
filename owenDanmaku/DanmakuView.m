@@ -46,6 +46,7 @@
             [self addSubview:newBullet];
             [_channelArray setObject:newBullet atIndexedSubscript:i];
             newBullet.frame = CGRectMake(SCREEN_WIDTH,  i * 40, width, 40);
+            //UIViewAnimationOptionCurveLinear使整个动画过程匀速
             [UIView animateWithDuration:DanmakuTime delay:0 options:(UIViewAnimationOptionCurveLinear) animations:^{
                 newBullet.frame = CGRectMake(0 - width,  i * 40,width, 40);
             } completion:^(BOOL finished) {
@@ -69,6 +70,7 @@
         }
     }
 }
+//判断弹幕是否碰撞方法
 - (BOOL)canBulletSendInTheChannel:(UILabel *)bullet newBullet:(UILabel *)newBullet
 {
     //获取动画中，控件的frame
